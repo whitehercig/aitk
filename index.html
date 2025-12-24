@@ -1,64 +1,182 @@
+
 <!doctype html>
 <html lang="ru">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>AITK portfolio</title>
+		<title>Обо мне — Бахрам</title>
 		<style>
 			:root { --bg:#f7f9fb; --card:#fff; --accent:#0b7285; --muted:#556; }
 			body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:#222; margin:0; padding:2rem}
-			.container{max-width:900px;margin:0 auto;background:var(--card);padding:2rem;border-radius:12px;box-shadow:0 6px 20px rgba(20,30,40,0.06)}
-			header{display:flex;gap:1.2rem;align-items:center}
-			img.avatar{width:140px;height:140px;border-radius:14px;object-fit:cover;border:2px solid #e6eef2}
-			h1{margin:0;font-size:1.8rem;color:var(--accent)}
+			.site{max-width:1000px;margin:0 auto}
+			.container{background:var(--card);padding:2rem;border-radius:12px;box-shadow:0 6px 20px rgba(20,30,40,0.06)}
+			header{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+			.brand{display:flex;align-items:center;gap:1rem}
+			img.avatar{width:96px;height:96px;border-radius:12px;object-fit:cover;border:2px solid #e6eef2}
+			h1{margin:0;font-size:1.6rem;color:var(--accent)}
+			nav ul{list-style:none;padding:0;margin:0;display:flex;gap:1rem}
+			nav a{color:var(--accent);text-decoration:none}
+			nav a:hover{text-decoration:underline}
+			main{margin-top:1rem}
+			article{margin-bottom:1.25rem}
 			p{line-height:1.6;color:var(--muted)}
-			section{margin-top:1.25rem}
-			ul, ol{margin-top:.5rem}
-			footer{margin-top:1.5rem;padding-top:1rem;border-top:1px solid #eef3f5;color:#556;font-size:.95rem}
-			a{color:var(--accent);text-decoration:none}
-			a:hover{text-decoration:underline}
+			.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+			.project-card{background:#fbfeff;padding:1rem;border:1px solid #edf5f7;border-radius:10px}
+			table{width:100%;border-collapse:collapse;margin-top:.5rem}
+			th,td{padding:.6rem;border:1px solid #e6eef2;text-align:left}
+			footer{margin-top:1.25rem;padding-top:1rem;border-top:1px solid #eef3f5;color:#556;font-size:.95rem}
+			form label{display:block;margin-top:.6rem;font-weight:600}
+			input[type="text"],input[type="email"],textarea{width:100%;padding:.5rem;border:1px solid #dfe9ec;border-radius:6px}
+			.form-actions{margin-top:.6rem;display:flex;gap:.5rem}
+			button{background:var(--accent);color:#fff;border:0;padding:.5rem .8rem;border-radius:6px;cursor:pointer}
+			button[type="reset"]{background:#6c757d}
 		</style>
 	</head>
 	<body>
-		<main class="container">
-			<header>
-				<img src="n1.jpg" alt="Аватар Бахрама" class="avatar" />
-				<div>
-					<h1>Бахрам</h1>
-					<p style="margin:.4rem 0 0">Веб-разработчик и любитель простых, понятных интерфейсов. Создаю аккуратный код и читаемые интерфейсы, которые помогают людям выполнять задачи проще.</p>
-				</div>
-			</header>
+		<div class="site">
+			<div class="container">
+				<header>
+					<div class="brand">
+						<img src="n1.jpg" alt="Аватар Бахрама" class="avatar" />
+						<div>
+							<h1>Бахрам</h1>
+							<p style="margin:4px 0 0;color:var(--muted)"><em>Веб‑разработчик</em> — простые интерфейсы, чистый код.</p>
+						</div>
+					</div>
 
-			<section>
-				<h2 style="font-size:1.1rem;margin:0 0 .4rem;color:#223">Немного обо мне</h2>
-				<p>Я увлечён разработкой фронтенда и изучаю современные подходы к созданию интерфейсов: от чистого HTML/CSS до прогрессивных SPA. Мне нравится работать с компонентами и думать о пользовательском опыте.</p>
-				<p>В работе ценю ясность и простоту: читаемый код важнее хитрой оптимизации, если она усложняет поддержку. Люблю автоматизировать рутинные задачи и писать небольшие утилиты, которые экономят время.</p>
-				<p>Свободное время провожу за чтением технических статей, тестированием новых библиотек и экспериментами с графикой. Также люблю путешествовать и фотографировать простые моменты жизни.</p>
-			</section>
+					<nav aria-label="Главное меню">
+						<ul>
+							<li><a href="index.html#about">Обо мне</a></li>
+							<li><a href="index.html#projects">Проекты</a></li>
+							<li><a href="index.html#skills">Навыки</a></li>
+							<li><a href="index.html#contact">Контакты</a></li>
+							<li><a href="projects.html">Полные проекты</a></li>
+						</ul>
+					</nav>
+				</header>
 
-			<section>
-				<h3 style="margin-bottom:.3rem">Интересы</h3>
-				<ul>
-					<li>Веб-разработка и современные фреймворки</li>
-					<li>Доступность и UX</li>
-					<li>Автоматизация задач и скрипты</li>
-					<li>Фотография и путешествия</li>
-				</ul>
-			</section>
+				<main>
+					<article id="about">
+                        <h2>Немного обо мне</h2>
 
-			<section>
-				<h3 style="margin-bottom:.3rem">Цели</h3>
-				<ol>
-					<li>Улучшить навыки архитектуры фронтенд-приложений и писать более масштабируемый код.</li>
-					<li>Создать и поддерживать собственные проекты с открытым исходным кодом.</li>
-					<li>Изучить принципы доступности и применять их в каждом проекте.</li>
-				</ol>
-			</section>
+                        <p>
+                            Меня зовут <strong>Бахрам</strong>. Я интересуюсь IT и постепенно развиваюсь в направлении
+                            веб-разработки. Мне нравится разбираться, как работают сайты изнутри,
+                            а не просто использовать готовые решения.
+                        </p>
 
-			<footer>
-				<p>Связаться со мной: <a href="https://github.com/whitehercig" target="_blank" rel="noopener">GitHub</a> • <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a> • <a href="https://www.instagram.com/bak_produc?igsh=Z3NiMzczMmdpaTl5" target="_blank" rel="noopener">Instagram</a></p>
-			</footer>
-		</main>
+                        <p>
+                            Сейчас я изучаю <em>HTML, CSS и JavaScript</em>, пробую делать собственные проекты
+                            и улучшать их шаг за шагом. Для меня важно понимать логику кода
+                            и писать так, чтобы потом самому было легко в нём разобраться.
+                        </p>
+
+                        <p>
+                            Помимо программирования, я много внимания уделяю саморазвитию,
+                            дисциплине и обучению. Участвую в учебных проектах и конкурсах,
+                            потому что считаю, что практика и опыт решают больше, чем просто теория.
+                        </p>
+                        </article>
+
+
+					<hr />
+
+					<article id="skills">
+						<h2>Мои навыки</h2>
+						<table aria-label="Таблица моих навыков">
+							<thead>
+								<tr>
+									<th>Навык</th>
+									<th>Уровень</th>
+									<th>Комментарий</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>HTML / CSS</td>
+									<td>Продвинутый</td>
+									<td>Семантика, адаптивная верстка</td>
+								</tr>
+								<tr>
+									<td>JavaScript</td>
+									<td>Средний — продвинутый</td>
+									<td>ES6+, DOM, Fetch API</td>
+								</tr>
+								<tr>
+									<td>Фреймворки</td>
+									<td>Средний</td>
+									<td>React / Vue — базовый опыт</td>
+								</tr>
+							</tbody>
+						</table>
+					</article>
+
+					<hr />
+
+					<article id="projects">
+                    <h2>Мои проекты</h2>
+
+                            <div class="projects">
+
+                                <div class="project-card">
+                                <h3>ECOteam</h3>
+                                <p>
+                                    Проект, связанный с экологией и командной работой.
+                                    Основная цель — привлечь внимание к экологическим проблемам
+                                    и показать, как совместные действия могут влиять на окружающую среду.
+                                </p>
+                                <p>
+                                    <a href="projects.html#project-ecoteam">Подробнее →</a>
+                                </p>
+                                </div>
+
+                                <div class="project-card">
+                                <h3>ZiroHub</h3>
+                                <p>
+                                    Веб-сайт, где <strong>искусственный интеллект</strong> на основе введённых пользователем данных
+                                    помогает подобрать <em>наиболее подходящий университет</em>.
+                                </p>
+                                <p>
+                                    <a href="projects.html#project-zirohub">Подробнее →</a>
+                                </p>
+                                </div>
+
+                            </div>
+                            </article>
+
+
+					<hr />
+
+					<article id="contact">
+						<h2>Связаться со мной</h2>
+						<form id="contact-form" action="#" method="post">
+							<label for="name">Имя</label>
+							<input id="name" name="name" type="text" required />
+
+							<label for="email">Email</label>
+							<input id="email" name="email" type="email" required />
+
+							<label for="message">Сообщение</label>
+							<textarea id="message" name="message" rows="5" required></textarea>
+
+							<label>
+								<input type="checkbox" name="consent" required /> Я согласен(а) на обработку данных
+							</label>
+
+							<div class="form-actions">
+								<button type="submit">Отправить</button>
+								<button type="reset">Очистить</button>
+							</div>
+						</form>
+					</article>
+				</main>
+
+				<footer>
+					<p>Связаться: <a href="https://github.com/whitehercig" target="_blank" rel="noopener">GitHub</a> • <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a> • <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></p>
+					<p>Перейти к <a href="#projects">проектам</a> или посмотреть <a href="projects.html">полные проекты</a>.</p>
+				</footer>
+			</div>
+		</div>
 	</body>
 </html>
 
